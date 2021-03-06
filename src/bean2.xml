@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userService" class="com.ayang.spring5.aop.service.UserService">
+        <property name="dao" ref="userDao"></property>
+    </bean>
+
+    <bean id="userDao" class="dao.UserDaoImpl"></bean>
+
+    <bean id="emp" class="com.ayang.spring5.aop.bean.Emp" >
+        <property name="ename" value="ayang"></property>
+        <property name="dept">
+            <bean id="dept" class="com.ayang.spring5.aop.bean.Dept">
+                <property name="name" value="dept"></property>
+                <property name="xm" value="ww"></property>
+            </bean>
+        </property>
+    </bean>
+</beans>

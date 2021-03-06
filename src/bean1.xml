@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="user" class="User" >-->
+
+<!--    </bean>-->
+    <bean id="book" class="com.ayang.spring5.aop.Book" scope="prototype">
+        <property name="bname" value="大速度"></property>
+        <property name="bauthor" value="阿阳"></property>
+    </bean>
+
+    <bean id="order" class="com.ayang.spring5.Orders" >
+        <constructor-arg name="oname" value="ayang"></constructor-arg>
+        <constructor-arg name="address" value="China Hangzhou"></constructor-arg>
+    </bean>
+</beans>
